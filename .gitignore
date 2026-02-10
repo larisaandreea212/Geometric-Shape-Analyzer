@@ -1,0 +1,9 @@
+.vs/
+*.ipch
+*.user
+*.db
+*.opendb
+out/
+x64/
+Debug/
+Release/
