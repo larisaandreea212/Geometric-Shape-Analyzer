@@ -26,7 +26,7 @@ int main()
         const double DENSITY_STEEL = 7.85; 
         const double THICKNESS = 1.0;      
 
-        std::cout << "Rularel Analiza Structurala...\n";
+        std::cout << "Rulare Analiza Structurala...\n";
 
         for (const auto& shape : shapes) {
             shape->PrintInfo();
