@@ -1,33 +1,33 @@
 export module Rectangle;
 
-#include <string>
-#include <string_view>
+import Std;
 import Shape;
-
 
 export namespace GeometricShapes
 {
-	export class Rectangle : public Shape {
-	private:
-		double m_width;
-		double m_height;
+    export class Rectangle : public Shape {
+    private:
+        double m_width;
+        double m_height;
+        Point m_position; //top-left point
+    public:
 
-	public:
+        Rectangle(std::string_view name,double x, double y, double width, double height);
+        virtual ~Rectangle() = default;
 
-		Rectangle(std::string_view name, double width, double height);
-		virtual ~Rectangle() = default;
+        void setWidth(double width);
+        void setHeight(double height);
+        void setPosition(double x, double y);
 
-		void setWidth(double width);
-		void setHeight(double height);
+        double getWidth() const;
+        double getHeight() const;
+        Point getPosition() const;
 
-		double getWidth() const;
-		double getHeight() const;
+        double getArea() const override;
+        double getPerimeter() const override;
+        Point getCentroid() const override;
+        double getMomentOfInertia() const override;
 
-		double getArea() const override;
-		double getPerimeter() const override;
-		Point getCentroid() const override;
-		double getMomentOfInertia() const;
-
-		static Rectangle createSquare(std::string_view name, double side);
-	};
+        static Rectangle createSquare(std::string_view name, double side);
+    };
 }

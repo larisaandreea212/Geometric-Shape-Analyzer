@@ -104,6 +104,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <BuildStlModules>true</BuildStlModules>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,10 +126,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Circle.ixx" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Rectangle.ixx" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Shape.ixx" />
+    <ClCompile Include="Std.ixx" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Triangle.ixx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
